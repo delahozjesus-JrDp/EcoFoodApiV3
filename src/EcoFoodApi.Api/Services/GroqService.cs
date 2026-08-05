@@ -41,7 +41,25 @@ public class GroqService
                 response_format = new { type = "json_object" }
             };
 
-            var content = new StringContent(JsonSerializer.Serialize(requestBody), Encoding.UTF8, "application/json");
+            /*var json = JsonSerializer.Serialize(requestBody);
+
+_logger.LogInformation("Solicitud enviada a Groq:");
+_logger.LogInformation(json);
+
+var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+var response = await client.PostAsync("/openai/v1/chat/completions", content);
+
+// Leer la respuesta ANTES de validar el código HTTP
+var responseJson = await response.Content.ReadAsStringAsync();
+
+_logger.LogInformation("Código de respuesta: {StatusCode}", response.StatusCode);
+_logger.LogInformation("Respuesta de Groq:");
+_logger.LogInformation(responseJson);
+
+response.EnsureSuccessStatusCode();*/
+
+           var content = new StringContent(JsonSerializer.Serialize(requestBody), Encoding.UTF8, "application/json");
             var response = await client.PostAsync("/openai/v1/chat/completions", content);
             response.EnsureSuccessStatusCode();
 
