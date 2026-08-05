@@ -1,0 +1,6 @@
+@EcoFoodApi.Api_HostAddress = http://localhost:5102
+
+GET {{EcoFoodApi.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
