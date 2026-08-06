@@ -72,7 +72,7 @@ La siguiente figura muestra la arquitectura general del sistema y la interacció
 
 # Integración con Inteligencia Artificial
 
-El proyecto utiliza la API de Groq para conectarse con el modelo **Llama 3.3**, el cual analiza los ingredientes disponibles y genera una receta en formato JSON.
+El proyecto utiliza la API de Groq para conectarse con el modelo **llama-3.3-70b-versatile**, el cual analiza los ingredientes disponibles y genera una receta en formato JSON.
 
 En caso de que el servicio no esté disponible, la API devuelve una respuesta de respaldo para garantizar la continuidad del servicio.
 
